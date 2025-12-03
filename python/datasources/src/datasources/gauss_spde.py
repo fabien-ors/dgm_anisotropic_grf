@@ -114,6 +114,7 @@ class VEDataset(Dataset):
         self.base_dataset = base_dataset
         methods = [dict_to_tensor]
         methods += [
+            transforms.RandomCrop((128, 128)), # TODO: make crop size configurable
             partial(add_ve_noise, **diffusion_cfg),
         ]
 
