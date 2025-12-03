@@ -119,7 +119,7 @@ class VEDataset(Dataset):
         self.base_dataset = base_dataset
         methods = [dict_to_tensor]
         methods += [
-            partial(remove_mean_std, mean=0.2476677981275561, std=0.1596085308468355),   # TODO: make mean/std configurable
+            #partial(remove_mean_std, mean=0.2476677981275561, std=0.1596085308468355),   # TODO: make mean/std configurable
             partial(random_crop, crop_size = (128, 128)),  # TODO: make crop size configurable
             partial(add_ve_noise, **diffusion_cfg),
         ]
