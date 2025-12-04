@@ -20,6 +20,9 @@ class CustomWriter(BasePredictionWriter):
         self.trainer_offset = trainer_offset
         if (not os.path.exists(self.output_dir)) and (self.output_dir != ""):
             os.makedirs(self.output_dir)
+            print(f"Generating to new folder: {self.output_dir}")
+        else:
+            print(f"Generating to existing folder: {self.output_dir}")
 
     def write_on_batch_end(
         self,
