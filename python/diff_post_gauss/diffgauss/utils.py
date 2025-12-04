@@ -61,7 +61,7 @@ def load_diffusion_net(diffusion_cfg, ckpt_path, sampler_config, is_latent: bool
             denoiser_config=diffusion_cfg["denoiser"],
             gammas=diffusion_cfg["ema"]["gammas"],
             batch_size=effective_batch_size,
-            weights_only=True, # TODO see https://docs.pytorch.org/docs/stable/generated/torch.load.html for weights_only safety
+            weights_only=False # TODO see https://docs.pytorch.org/docs/stable/generated/torch.load.html for weights_only safety
         )
     if sampler_config is not None:
         denoiser.configure_predict_step(mode="generate", **sampler_config)
