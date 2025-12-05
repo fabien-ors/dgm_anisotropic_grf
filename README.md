@@ -37,7 +37,7 @@ This will create a subfolder in `WHERE_TO_SAVE` with the name of the sampler fro
 One can then reassemble all those `.pt` files into a `.h5`file by running
 ```
 cd python/diff_post_gauss
-python join_batch_generated_data_into_h5.py --path PATH_TO_FOLDER_CONTAINING_RAW_DATA --field_name samples
+python join_batch_generated_data_into_h5.py --path PATH_TO_FOLDER_CONTAINING_RAW_DATA --field_name images
 ```
 This will create a `data.h5̀` file in `PATH_TO_FOLDER_CONTAINING_RAW_DATA` with everything that was inside `PATH_TO_FOLDER_CONTAINING_RAW_DATA/raw_data`.
 

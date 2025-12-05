@@ -1,5 +1,5 @@
 name: Flumy
-data_dir: /data/Flumy/turb_2D_def_vargr
+data_dir: /data/Flumy/turb_2D_def_vargr/data
 n_procs: 3
 batch_size: 32
 mode: Diff_VE
