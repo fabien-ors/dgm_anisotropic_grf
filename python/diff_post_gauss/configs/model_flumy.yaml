@@ -7,7 +7,7 @@ defaults:
   - checkpoint: ambient.yaml
 
 trainer:
-  max_epochs: 80
+  max_epochs: 800
   accumulate_grad_batches: 8 #Change this so that with the batch size and n of gpu it makes a batch of 2048
   check_val_every_n_epoch: 1
   log_every_n_steps: 10
